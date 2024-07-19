@@ -3,3 +3,5 @@ app/test_qrgen.py
 .gitignore
 .github
 .*
+*.png
+README.md
