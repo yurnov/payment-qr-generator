@@ -1,4 +1,4 @@
-name: Release image to GHCR
+name: Run tests and linters on push
 on:
   push:
     branches:
