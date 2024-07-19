@@ -1,0 +1,7 @@
+app/test_qrgen.py
+.git
+.gitignore
+.github
+.*
+*.png
+README.md
