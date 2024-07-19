@@ -3,7 +3,7 @@ import qrcode
 import argparse
 
 
-def create_qr(account, edrpo, recipient, amount, purpose):
+def create_qr(account, edrpo, recipient, amount, purpose, output_file):
     # Construct the data string for version 002 of QR code, reference https://bank.gov.ua/ua/legislation/Resolution_01022021_11
     # Elements of string are separated by LF (line feed) character:
     # 1. Empty element without any separator
@@ -32,10 +32,11 @@ def create_qr(account, edrpo, recipient, amount, purpose):
 
     # Generate the QR code
     qr = qrcode.make(qr_url)
-    qr.save("/output/qr_code.png")
+    qr.save(output_file)
 
     # return the URL, it's used for testing
     return qr_url
+
 
 def main():
 
@@ -77,7 +78,9 @@ def main():
         purpose = input("Enter the purpose of the payment: ")
 
     # Create QR code
-    create_qr(account, edrpo, recipient, amount, purpose)
+    output_file = "/output/qr_code.png"
+    create_qr(account, edrpo, recipient, amount, purpose, output_file)
+
 
 if __name__ == "__main__":
     main()
