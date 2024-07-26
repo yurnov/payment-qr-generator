@@ -5,8 +5,9 @@ LABEL org.opencontainers.image.source = "https://github.com/yurnov/payment-qr-ge
       org.opencontainers.image.licenses = "MIT" \
       org.opencontainers.image.title = "Payment QR Generator"
 
-RUN mkdir -p /output && \
-    pip install qrcode~=7.4
+RUN --mount=type=bind,source=./app/requirements.txt,target=/tmp/requirements.txt \
+      mkdir -p /output && \
+      python -m pip install --no-cache-dir -r /tmp/requirements.txt
 
 COPY app /app
 
