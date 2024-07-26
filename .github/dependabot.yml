@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "./app"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "22:00"
+  - package-ecosystem: "github-actions"
+    directory: "./.github/workflows"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "20:00"

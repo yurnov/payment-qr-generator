@@ -21,7 +21,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          $(cat Dockerfile | grep "pip install" | cut -f2- -d " ")
+          python -m pip install --no-cache-dir -r ./app/requirements.txt
 
       - name: Install linters
         run: |
