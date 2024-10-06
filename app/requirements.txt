@@ -1,1 +1,1 @@
-qrcode~=7.4
+qrcode~=8.0
