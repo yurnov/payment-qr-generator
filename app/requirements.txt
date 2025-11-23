@@ -1,1 +1,2 @@
 qrcode~=8.2
+pillow~=12.0.0
