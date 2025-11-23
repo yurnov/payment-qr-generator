@@ -42,4 +42,4 @@ docker run -it --rm -v $(pwd):/output ghcr.io/yurnov/payment-qr-generator:latest
 
 ## License
 
-Files included in this repository is avaliable under terms of [MIT license](LICENSE.md).
+Files included in this repository is available under terms of [MIT license](LICENSE.md).
